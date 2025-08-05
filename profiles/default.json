@@ -1,0 +1,80 @@
+{
+    "settings": {
+        "item_loop_path": ".//multiShipmentOrderLineItem"
+    },
+    "columns": {
+        "Item Number": {
+            "type": "attribute",
+            "source": "item",
+            "path": "number"
+        },
+        "Order Date": {
+            "type": "xpath",
+            "source": "root",
+            "path": ".//creationDateTime"
+        },
+        "Order Number": {
+            "type": "xpath",
+            "source": "root",
+            "path": ".//uniqueCreatorIdentification"
+        },
+        "Kode Barang": {
+            "type": "xpath_indexed",
+            "source": "item",
+            "path": ".//additionalTradeItemIdentification/additionalTradeItemIdentificationValue",
+            "index": 0
+        },
+        "Item Description": {
+            "type": "xpath_indexed",
+            "source": "item",
+            "path": ".//additionalTradeItemIdentification/additionalTradeItemIdentificationValue",
+            "index": 0
+        },
+        "Quantity": {
+            "type": "xpath_indexed",
+            "source": "item",
+            "path": ".//additionalTradeItemIdentification/additionalTradeItemIdentificationValue",
+            "index": 0
+        },
+        "Unit Price": {
+            "type": "xpath",
+            "source": "item",
+            "path": ".//netPrice/amount/monetaryAmount"
+        },
+        "Total Price": {
+            "type": "xpath",
+            "source": "item",
+            "path": ".//netAmount/amount/monetaryAmount"
+        },
+        "Qty Barang": {
+            "type": "calculated",
+            "source": "item",
+            "formula": "{Total Price}/{Unit Price}"
+        },
+        "Ship to": {
+            "type": "xpath",
+            "source": "root",
+            "path": ".//shipToLogistics/shipTo/additionalPartyIdentification/additionalPartyIdentificationValue"
+        },
+        "GTIN": {
+            "type": "xpath",
+            "source": "item",
+            "path": ".//gtin"
+        },
+        "Document Status": {
+            "type": "attribute",
+            "source": "root",
+            "path": "documentStatus"
+        },
+        "Seller": {
+            "type": "xpath",
+            "source": "root",
+            "path": ".//seller/additionalPartyIdentification/additionalPartyIdentificationValue"
+        },
+        "CTRI": {
+            "type": "xpath",
+            "source": "root",
+            "path": ".//additionalPartyIdentification[additionalPartyIdentificationType='FOR_INTERNAL_USE_11']/additionalPartyIdentificationValue"
+        }
+    }
+}

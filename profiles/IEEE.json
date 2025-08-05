@@ -1,0 +1,92 @@
+{
+    "settings": {
+        "item_loop_path": ".//multiShipmentOrderLineItem"
+    },
+    "columns": {
+        "Selectedstyle": {
+            "type": "attribute",
+            "source": "item",
+            "path": "./@SelectedStyle"
+        },
+        "First": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Author/NameList/Person/First"
+        },
+        "Last": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Author/NameList/Person/Last"
+        },
+        "Middle": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Author/Author/NameList/Person/Middle"
+        },
+        "Booktitle": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/BookTitle"
+        },
+        "City": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/City"
+        },
+        "Edition": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Edition"
+        },
+        "Guid": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Guid"
+        },
+        "Issue": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Issue"
+        },
+        "Journalname": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/JournalName"
+        },
+        "Pages": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Pages"
+        },
+        "Publisher": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Publisher"
+        },
+        "Sourcetype": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/SourceType"
+        },
+        "Tag": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Tag"
+        },
+        "Title": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Title"
+        },
+        "Volume": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Volume"
+        },
+        "Year": {
+            "type": "xpath",
+            "source": "item",
+            "path": "./Source/Year"
+        }
+    }
+}
